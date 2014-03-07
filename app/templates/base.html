@@ -1,0 +1,49 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+
+	<head>
+		<title>Agiliq Blog</title>
+
+		<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}"  type="text/css" />
+
+		<style>
+
+		</style>
+	</head>
+
+	<body>
+
+		<a href="https://github.com/manjunath24" target="__blank">
+				<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/		forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
+		</a>
+
+		<div class="container">
+			<h1><a href="/">My Institute</a></h1>
+			<!--<div class="navbar">
+				      <div class="navbar-inner">
+					<div class="container">
+					  <ul class="nav">
+					    <li class="active"><a href="">Home</a></li>
+					    <li class="active"><a href="">About</a></li>
+					  </ul>
+					</div>
+				      </div>
+			</div>-->
+
+		{% block content %}
+		{% endblock %}
+
+
+		</div>
+
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+
+
+	</body>
+</html>
+
+
