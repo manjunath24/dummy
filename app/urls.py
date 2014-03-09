@@ -1,9 +1,7 @@
 from django.conf.urls import patterns, include, url
 
-from .views import InstituteCreateView
-
 
 urlpatterns = patterns('',
-                       url(r'^registration/$',
-                           InstituteCreateView.as_view(),
-                           name='institute_registration'),)
+                       url(r'^registration/$', 'app.views.sign_up',
+                           name='institute_registration'),
+                       url(r'^confirm/$', 'app.views.confirm', name='confirm_signup'),)

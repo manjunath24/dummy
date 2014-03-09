@@ -8,11 +8,6 @@
   
     <fieldset>  
           <legend>Sign Up</legend>  
-
-	  {% if form.errors %}
- 		<p>Please fill all the fields.</p>
-	  {% endif %}
-
           {% for field in form %}
             <div class="control-group">  
               <label class="control-label" for="input01">{{ field.label_tag }}</label>
