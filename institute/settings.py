@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
@@ -37,6 +36,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
+    'account',
+    'registration',
+    'bootstrap3',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -61,7 +63,8 @@ DATABASES = {
         'ENGINE'    : 'django.db.backends.mysql',
         'NAME'      : 'institute',
         'USER'      : os.environ.get("MYAPP_DB_USER", 'root'),
-        'PASSWORD'  : os.environ.get("MYAPP_DB_PASSWORD", 'root'),
+        #'PASSWORD'  : os.environ.get("MYAPP_DB_PASSWORD", 'root'),
+	'PASSWORD'  : os.environ.get("MYAPP_DB_PASSWORD", 'admin'),
         'HOST'      : ''
     }
 }
@@ -89,3 +92,15 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static/"),
 
 )
+
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, "account/templates"),
+)
+
+
+ACCOUNT_ACTIVATION_DAYS=7
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
