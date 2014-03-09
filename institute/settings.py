@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'account',
     'registration',
     'bootstrap3',
+    'crispy_forms',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -93,6 +94,7 @@ STATICFILES_DIRS = (
 
 )
 
+ACCOUNT_ACTIVATION_DAYS=7
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
@@ -103,5 +105,4 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, "account/templates"),
 )
 
-
-ACCOUNT_ACTIVATION_DAYS=7
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
