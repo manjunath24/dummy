@@ -3,7 +3,6 @@ MySQL-python==1.2.5
 argparse==1.2.1
 distribute==0.6.34
 django-bootstrap3==2.5.5
-django-crispy-forms==1.4.0
 django-phonenumber-field==0.2a3
 django-registration==1.0
 pep8==1.4.6

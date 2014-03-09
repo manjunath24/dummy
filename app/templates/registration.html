@@ -1,12 +1,30 @@
 {% extends 'base.html' %}
-{% load crispy_forms_tags %}
+{% load bootstrap3 %}
 
-
-{% block title %} Institute SignUp {% endblock %}
+{% block title %} Tutor SignUp {% endblock %}
 
 {% block content %}
-<form action="" method="POST" class="col-md-3" id="padding">{% csrf_token %}
-    {{ form|crispy }}
-    <p><button class="btn btn-primary">SignUp</button></p>
+
+<div class="row">
+    <div class="col-sm-offset-2 col-sm-10">
+      <h1>Tutor SignUp</h1>
+      <p>Already registered?  
+        <a href="{% url 'django.contrib.auth.views.login' %}">Sign in here.</a></p>
+    </div>
+  </div>
+
+<form action="" method="post" role="form" class="form-horizontal">{% csrf_token %}
+
+    {% bootstrap_form form layout='horizontal' %}
+
+    {% buttons %}
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-primary">
+        {% bootstrap_icon "user" %} Sign Me Up!
+      </button>
+      <input class="btn btn-danger" type="reset" value="Reset">
+    </div>
+    {% endbuttons %}
+
 </form>
 {% endblock %}

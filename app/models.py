@@ -4,9 +4,9 @@ from phonenumber_field.modelfields import PhoneNumberField
 
 # Create your models here.
 class Institute(models.Model):
-    name = models.CharField(max_length=100, verbose_name='Institute Name')
+    name = models.CharField(max_length=100, verbose_name='Name of Institute')
     email = models.EmailField(max_length=100)
-    password = models.CharField(max_length=50)
+    password = models.CharField(max_length=50, help_text='Required minimum 6 characters')
     contact_person = models.CharField(max_length=100)
     address = models.TextField()
     area = models.CharField(max_length=50)

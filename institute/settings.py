@@ -39,7 +39,6 @@ INSTALLED_APPS = (
     'account',
     'registration',
     'bootstrap3',
-    'crispy_forms',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -65,7 +64,7 @@ DATABASES = {
         'NAME'      : 'institute',
         'USER'      : os.environ.get("MYAPP_DB_USER", 'root'),
         #'PASSWORD'  : os.environ.get("MYAPP_DB_PASSWORD", 'root'),
-	'PASSWORD'  : os.environ.get("MYAPP_DB_PASSWORD", 'admin'),
+	    'PASSWORD'  : os.environ.get("MYAPP_DB_PASSWORD", 'admin'),
         'HOST'      : ''
     }
 }
@@ -102,7 +101,5 @@ EMAIL_HOST_USER = 'manjunath@agiliq.com'
 EMAIL_HOST_PASSWORD = 'canara23640'
 
 TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, "account/templates"),
+    os.path.join(BASE_DIR, "templates"),
 )
-
-CRISPY_TEMPLATE_PACK = 'bootstrap3'
