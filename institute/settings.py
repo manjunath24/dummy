@@ -97,8 +97,8 @@ ACCOUNT_ACTIVATION_DAYS=7
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'manjunath@agiliq.com'
-EMAIL_HOST_PASSWORD = 'canara23640'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, "templates"),
